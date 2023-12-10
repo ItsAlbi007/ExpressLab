@@ -6,13 +6,13 @@
   <title>First Express</title>
 </head>
 <body>
-  <h1>All To Dos</h1>
+  <h1>Gym work outs</h1>
   <ul>
-    <% todos.forEach(function(t) { %>
+    <% gym.forEach(function(g) { %>
       <li>
-        <%= t.todo %>
+        <%= g.gym %>
           -
-        <%= t.done ? 'done' : 'not done' %>  
+        <%= g.done ? 'done' : 'not done' %>  
       </li>
     <% })  %>
   </ul>

@@ -3,7 +3,8 @@ const express = require('express')
 const path = require('path')
 
 // require the to do "database"
-const todoDb = require('./data/todo-db')
+const gymTd = require('./data/gym-td')
+const gymTd = require('./data/gym-td')
 //create our express app
 const app = express()
 
@@ -19,7 +20,7 @@ app.set('views', path.join(__dirname, 'views'))
 //next lesson well use better practice routing
 app.get('/', function(req, res) {
 // path MUST start with a leading slash
-  res.redirect('/todos')
+  res.redirect('/gym')
 })
 
 app.get('/Home', function(req, res) {
@@ -28,9 +29,9 @@ app.get('/Home', function(req, res) {
   res.render('home')
 })
 
-app.get('/todos', function(req, res) {
-  const todos = todoDb.getAll()
-  res.render('todos/index', {todos})
+app.get('/gym', function(req, res) {
+  const gym = gymTd.getAll()
+  res.render('gym/index', {gym})
 })
 
 app.listen(3000, function() {
